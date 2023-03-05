@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-// Here we import a helper function that will check if the email is valid
 import { validateEmail } from '../../utils/helpers';
+import '../../styles/Contact.css';
+import github from '../../assets/github.png'
+import linkedIn from '../../assets/linkedin.png'
 
 
 function Contact() {
@@ -15,7 +17,7 @@ function Contact() {
     const inputType = target.name;
     const inputValue = target.value;
 
-    // Based on the input type, we set the state of either email, username, and password
+    // Set state of email, username, or password based on input
     if (inputType === 'email') {
       setEmail(inputValue);
     } else if (inputType === 'name') {
@@ -29,12 +31,12 @@ function Contact() {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
 
-    // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
+    // Check if email is valid, if name is empty
     if (!validateEmail(email) || !name) {
       setErrorMessage('Email or name is invalid');
-      // We want to exit out of this code block if something is wrong so that the user can correct it
       return;
     }
+    // Check to see if message entered
     if (!message) {
       setErrorMessage('Please enter a message');
       return;
@@ -42,7 +44,7 @@ function Contact() {
     
     alert(`Thanks for your email ${name}!`);
 
-    // If everything goes according to plan, we want to clear out the input after a successful registration.
+    // Clear out the input after a successful message sent
     setName('');
     setMessage('');
     setEmail('');
@@ -50,37 +52,52 @@ function Contact() {
   
   
   return (
-    <div>
-      <h1>Contact Page</h1>
-      <form className="form">
-        <input
+    <div className="section-container">
+      <h1>Interested in working together?</h1>
+      <h2>Contact me!</h2>
+      <div className='contact-form-container'>
+      <form className="contact-form">
+        <input className='input-box email-input'
           value={email}
           name="email"
           onChange={handleInputChange}
           type="email"
           placeholder="Email"
         />
-        <input
+        <input className='input-box email-input'
           value={name}
           name="name"
           onChange={handleInputChange}
           type="text"
           placeholder="Name"
         />
-        <input
+        <textarea className='input-box body-input'
           value={message}
           name="message"
           onChange={handleInputChange}
           type="text"
           placeholder="Message"
-        />
-        <button type="button" onClick={handleFormSubmit}>Submit</button>
+        ></textarea>
+        <button type="button" className="contact-btn" onClick={handleFormSubmit}>Send Email</button>
       </form>
       {errorMessage && (
         <div>
           <p className="error-text">{errorMessage}</p>
         </div>
       )}
+      </div>
+      <div className='social-icons-container'>
+        <a href="https://github.com/ashlynnwood"
+          className='social-icon'
+          target="_blank" rel="noreferrer">
+          <img src={github} alt='github icon'/>
+        </a>
+        <a href="https://www.linkedin.com/in/ashlynn-wood-b15b75258/"
+          className='social-icon'
+          target="_blank" rel="noreferrer">
+          <img src={linkedIn} alt='linkedin icon'/>
+        </a>
+      </div>
     </div>
   );
 }
