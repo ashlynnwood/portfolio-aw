@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { validateEmail } from '../../utils/helpers';
-import '../../styles/Contact.css';
-import github from '../../assets/github.png'
-import linkedIn from '../../assets/linkedin.png'
+import { validateEmail } from '../../../utils/helpers';
+import './Contact.css';
+import github from '../../../assets/github.png'
+import linkedIn from '../../../assets/linkedin.png'
 
 
 function Contact() {
@@ -27,28 +27,51 @@ function Contact() {
     }
   };
 
-  const handleFormSubmit = (e) => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
-    e.preventDefault();
-
+  const handleErrors = (e) => {
     // Check if email is valid, if name is empty
-    if (!validateEmail(email) || !name) {
-      setErrorMessage('Email or name is invalid');
+    if (!validateEmail(email)) {
+      setErrorMessage('Email is required');
       return;
+    } else {
+      setErrorMessage('');
+    }
+    if (!name) {
+      setErrorMessage('Name is required');
+      return;
+    } else {
+      setErrorMessage('');
     }
     // Check to see if message entered
     if (!message) {
-      setErrorMessage('Please enter a message');
+      setErrorMessage('Message required');
       return;
+    } else {
+      setErrorMessage('');
     }
-    
-    alert(`Thanks for your email ${name}!`);
+  }
 
-    // Clear out the input after a successful message sent
-    setName('');
-    setMessage('');
-    setEmail('');
-  };
+  // const handleFormSubmit = (e) => {
+  //   // Preventing the default behavior of the form submit (which is to refresh the page)
+  //   e.preventDefault();
+
+  //   // Check if email is valid, if name is empty
+  //   if (!validateEmail(email) || !name) {
+  //     setErrorMessage('Email or name is invalid');
+  //     return;
+  //   }
+  //   // Check to see if message entered
+  //   if (!message) {
+  //     setErrorMessage('Please enter a message');
+  //     return;
+  //   }
+    
+  //   alert(`Thanks for your email ${name}!`);
+
+  //   // Clear out the input after a successful message sent
+  //   setName('');
+  //   setMessage('');
+  //   setEmail('');
+  // };
   
   
   return (
@@ -61,6 +84,7 @@ function Contact() {
           value={email}
           name="email"
           onChange={handleInputChange}
+          onBlur={handleErrors}
           type="email"
           placeholder="Email"
         />
@@ -68,6 +92,7 @@ function Contact() {
           value={name}
           name="name"
           onChange={handleInputChange}
+          onBlur={handleErrors}
           type="text"
           placeholder="Name"
         />
@@ -75,10 +100,13 @@ function Contact() {
           value={message}
           name="message"
           onChange={handleInputChange}
+          onBlur={handleErrors}
           type="text"
           placeholder="Message"
         ></textarea>
-        <button type="button" className="contact-btn" onClick={handleFormSubmit}>Send Email</button>
+        <a href={`mailto:ashlynnnwood@gmail.com?subject=${name}&body=${message}`}>
+          <button type="button" className="contact-btn">Send Email</button>
+          </a>
       </form>
       {errorMessage && (
         <div>

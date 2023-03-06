@@ -1,14 +1,13 @@
 import React from 'react';
-import Footer from '../Footer'
+import pdf from '../../assets/resume.pdf';
 
 export default function Resume() {
   return (
     <div>
       <h1>Resume</h1>
-      <p>
-        
-      </p>
-      {Footer}
+      <a href={pdf} target='_blank' rel='noreferrer'>Download my resume</a>
+      <p>Technical Skills</p>
+  
     </div>
   );
 }
