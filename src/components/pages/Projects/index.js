@@ -67,7 +67,7 @@ export default function Projects() {
         <div className="project-details-container">
           <h2 className='project-title'>{project.title}</h2>
           <a href={project.github} target='_blank' rel='noreferrer' className='link'>Github</a>
-          <a href={project.live} target='_blank' rel='noreferrer' className='link'>Check me out</a>
+          {/* <a href={project.live} target='_blank' rel='noreferrer' className='link'>Check me out</a> */}
           </div>
         </div>
       ))}

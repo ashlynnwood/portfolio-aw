@@ -8,41 +8,43 @@ export default function Resume() {
       <h1>Resume</h1>
       <a href={pdf} target='_blank' rel='noreferrer'>Download my resume</a>
       <p>Technical Skills</p>
-      <div class="circle">
-        <span class="shape-text">HTML</span>
+      <div className='skills-container'>
+      <div className="circle">
+        <span className="shape-text">HTML</span>
         </div>
-      <div class="triangle">
-        <span class="shape-text">CSS</span>
+      <div className="triangle">
+        <span className="shape-text">CSS</span>
         </div>
-      <div class="diamond">
-        <span class="shape-text">JavaScript</span>
+      <div className="diamond">
+        <span className="shape-text">JavaScript</span>
         </div>
-      <div class="circle">
-        <span class="shape-text">React</span>
+      <div className="circle">
+        <span className="shape-text">React</span>
       </div>
-      <div class="shape">
-        <span class="shape-text">Bootstrap</span>
+      <div className="cloud">
+        <span className="shape-text">Bootstrap</span>
       </div>
-      <div class="shape">
-        <span class="shape-text">Node.js</span>
+      <div className="shape">
+        <span className="shape-text">Node.js</span>
       </div>
-      <div class="shape">
+      <div className="shape">
         <span class="shape-text">Express.js</span>
       </div>
-      <div class="shape">
-        <span class="shape-text">MongoDB</span>
+      <div className="shape">
+        <span className="shape-text">MongoDB</span>
       </div>
-      <div class="shape">
-        <span class="shape-text">APIs</span>
+      <div className="shape">
+        <span className="shape-text">APIs</span>
       </div>
-      <div class="shape">
-        <span class="shape-text">mySQL, Sequelize</span>
+      <div className="shape">
+        <span className="shape-text">mySQL, Sequelize</span>
       </div>
-      <div class="shape">
-        <span class="shape-text">PWA</span>
+      <div className="shape">
+        <span className="shape-text">PWA</span>
       </div>
-      <div class="shape">
-        <span class="shape-text">MERN</span>
+      <div className="shape">
+        <span className="shape-text">MERN</span>
+      </div>
       </div>
     </div>
   );

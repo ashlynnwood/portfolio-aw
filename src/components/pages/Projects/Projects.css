@@ -59,6 +59,7 @@
     font-weight: 600;
     color: #4c55cc;
     text-decoration: none;
+    margin-top: 10px;
 }
 @media only screen and (max-width:640px) {
     .project-cards-container{
