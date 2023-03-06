@@ -2,6 +2,7 @@
   text-align: center;
   margin-top: 30px;
 }
+
 .project-container{
   display: flex;
   flex-direction: row;
@@ -56,7 +57,8 @@
 }
 .link {
     font-weight: 600;
-    color: #4089ed;
+    color: #4c55cc;
+    text-decoration: none;
 }
 @media only screen and (max-width:640px) {
     .project-cards-container{
