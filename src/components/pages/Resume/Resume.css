@@ -1,0 +1,72 @@
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px; /* half the width and height */
+  background-color: #fe79ec;
+  transition: transform 0.5s ease-in-out;
+}
+
+.circle:hover {
+  transform: translateX(-10px) rotate(5deg);
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-top: 50px solid #e6502e;
+  border-right: 50px solid transparent;
+  border-bottom: 0 solid transparent;
+  border-left: 0 solid transparent;
+}
+
+.diamond {
+  width: 50px;
+  height: 50px;
+  background-color: #fdc222;
+  transform: rotate(45deg);
+}
+
+.shape {
+  width: 50px;
+  height: 50px;
+  background-color: #4c55cc;
+  border-radius: 50%;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.shape-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.shape:hover {
+  transform: translateX(-10px) rotate(5deg);
+}
+
+
+/* @keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+} */

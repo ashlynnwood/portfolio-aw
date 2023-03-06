@@ -12,10 +12,12 @@
 .footer a {
   font-size: 0.8rem;
   color: #fff;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 .footer a:hover {
-  opacity: 0.6;
+  color: #fe79ec;
 }
 
 .footer .social {
@@ -34,6 +36,7 @@
 .footer p {
   font-size: 0.8rem;
   color: #fff;
+  font-weight: bold;
 }
 
 .stripe {

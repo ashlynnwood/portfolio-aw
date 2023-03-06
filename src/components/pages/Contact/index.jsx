@@ -3,6 +3,8 @@ import { validateEmail } from '../../../utils/helpers';
 import './Contact.css';
 import github from '../../../assets/github.png'
 import linkedIn from '../../../assets/linkedin.png'
+// import Button from 'react-bootstrap/Button';
+// import Modal from 'react-bootstrap/Modal';
 
 
 function Contact() {
