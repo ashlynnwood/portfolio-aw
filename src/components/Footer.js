@@ -5,7 +5,11 @@ import '../styles/Footer.css';
 
 export default function Footer() {
   return (
-    <div className='footer footer-container'>
+    <div className='footer'>
+      <div className='stripe yellow'></div>
+      <div className='stripe pink'></div>
+      <div className='stripe orange'></div>
+      <div className='stripe blue'></div>
       <a href="mailto:ashlynnwood@gmail.com">ashlynnwood@gmail.com</a>
     <div className='social'>
       <a href="https://www.linkedin.com/in/ashlynn-wood-b15b75258/" 
@@ -17,7 +21,7 @@ export default function Footer() {
           <img src={github} alt="GitHub icon"/>
       </a>
     </div>
-    <p>Copyright &copy; Ashlynn Wood <span id="datee"></span>, All rights reserved</p>
+    <p>Copyright &copy; Ashlynn Wood 2023</p>
     </div>
   );
 }

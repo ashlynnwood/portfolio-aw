@@ -1,8 +1,5 @@
 .footer {
-  background: #111111;
-}
-
-.footer .container {
+  background: #1f2986;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,4 +34,22 @@
 .footer p {
   font-size: 0.8rem;
   color: #fff;
+}
+
+.stripe {
+  width: 100%;
+  height: 20px;
+}
+
+.yellow {
+  background-color: #fdc222;
+}
+.pink {
+  background-color: #fe79ec;
+}
+.orange {
+  background-color: #e6502e;
+}
+.blue {
+  background-color: #4c55cc;
 }
