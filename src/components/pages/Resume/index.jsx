@@ -44,7 +44,6 @@ export default function Resume() {
       <div class="shape">
         <span class="shape-text">MERN</span>
       </div>
-
     </div>
   );
 }
