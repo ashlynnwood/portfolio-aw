@@ -55,7 +55,7 @@ export default function Projects() {
         <div className='project-card'>
           <div className="image-container">
             <a href={project.live}
-                className="project-external-link"
+                className="project-link"
                 target="_blank" rel='noreferrer'
                 >
                 <img src={project.image} 
