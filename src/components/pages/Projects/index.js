@@ -47,8 +47,10 @@ export default function Projects() {
   ]
 
   return (
-    <div className='project-container'>
+    <div className='heading'>
       <h1>Projects</h1>
+      <h5>Check out my work!</h5>
+    <div className='project-container'>
       {data.map(project => (
         <div className='project-card'>
           <div className="image-container">
@@ -69,6 +71,7 @@ export default function Projects() {
           </div>
         </div>
       ))}
+    </div>
     </div>
   );
 }
