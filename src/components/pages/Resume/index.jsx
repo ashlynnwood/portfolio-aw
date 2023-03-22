@@ -5,9 +5,10 @@ import './Resume.css';
 export default function Resume() {
   return (
     <div>
+      <div className='box'><span className="shape-text">HTML</span></div>
       <h1>Resume</h1>
       <a href={pdf} target='_blank' rel='noreferrer'>Download my resume</a>
-      <p>Technical Skills</p>
+      <h4>Here's what I can do:</h4>
       <div className='skills-container'>
       <div className="circle">
         <span className="shape-text">HTML</span>
