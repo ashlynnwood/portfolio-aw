@@ -3,7 +3,7 @@ import paw from '../../../assets/pawpath.jpeg'
 import garage from '../../../assets/garagesale.png'
 import note from '../../../assets/notetaker.png'
 import jate from '../../../assets/jate.png'
-import anythm from '../../../assets/anythm1.jpeg'
+import anythm from '../../../assets/anthym.jpeg'
 import mongomate from '../../../assets/mongoose.jpeg'
 import './Projects.css';
 
