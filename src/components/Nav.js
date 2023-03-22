@@ -1,18 +1,16 @@
 import React from 'react';
 
-// Here we are using object destructuring assignment to pluck off our variables from the props object
-// We assign them to their own variable names
-function NavTabs({ currentPage, handlePageChange }) {
+function Nav({ currentP, handlePChange }) {
   return (
     <ul className="nav nav-tabs">
       <li className="nav-item">
         <a
           href="#home"
-          onClick={() => handlePageChange('Home')}
+          onClick={() => handlePChange('Home')}
           // This is a conditional (ternary) operator that checks to see if the current page is "Home"
           // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
           // Do this for every page
-          className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
+          className={currentP === 'Home' ? 'nav-link active' : 'nav-link'}
         >
           Home
         </a>
@@ -20,8 +18,8 @@ function NavTabs({ currentPage, handlePageChange }) {
       <li className="nav-item">
         <a
           href="#about"
-          onClick={() => handlePageChange('About')}
-          className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
+          onClick={() => handlePChange('About')}
+          className={currentP === 'About' ? 'nav-link active' : 'nav-link'}
         >
           About Me
         </a>
@@ -29,8 +27,8 @@ function NavTabs({ currentPage, handlePageChange }) {
       <li className="nav-item">
         <a
           href="#projects"
-          onClick={() => handlePageChange('Projects')}
-          className={currentPage === 'Projects' ? 'nav-link active' : 'nav-link'}
+          onClick={() => handlePChange('Projects')}
+          className={currentP === 'Projects' ? 'nav-link active' : 'nav-link'}
         >
           Projects
         </a>
@@ -38,8 +36,8 @@ function NavTabs({ currentPage, handlePageChange }) {
       <li className="nav-item">
         <a
           href="#contact"
-          onClick={() => handlePageChange('Contact')}
-          className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
+          onClick={() => handlePChange('Contact')}
+          className={currentP === 'Contact' ? 'nav-link active' : 'nav-link'}
         >
           Contact
         </a>
@@ -47,8 +45,8 @@ function NavTabs({ currentPage, handlePageChange }) {
       <li className="nav-item">
         <a
           href="#resume"
-          onClick={() => handlePageChange('Resume')}
-          className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}
+          onClick={() => handlePChange('Resume')}
+          className={currentP === 'Resume' ? 'nav-link active' : 'nav-link'}
         >
           Resume
         </a>
@@ -57,4 +55,4 @@ function NavTabs({ currentPage, handlePageChange }) {
   );
 }
 
-export default NavTabs;
+export default Nav;

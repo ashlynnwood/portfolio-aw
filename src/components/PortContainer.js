@@ -9,32 +9,30 @@ import Footer from './Footer';
 import '../index.css';
 
 export default function PortContainer() {
-  const [currentPage, setCurrentPage] = useState('Home');
+  const [currentP, setCurrentP] = useState('Home');
 
-  // This method is checking to see what the value of `currentPage` is. Depending on the value of currentPage, we return the corresponding component to render.
+//  Render currect page components depending on current page user is on
   const renderPage = () => {
-    if (currentPage === 'Home') {
+    if (currentP === 'Home') {
       return <Home />;
     }
-    if (currentPage === 'About') {
+    if (currentP === 'About') {
       return <About />;
     }
-    if (currentPage === 'Projects') {
+    if (currentP === 'Projects') {
       return <Projects />;
     }
-    if (currentPage === 'Resume') {
+    if (currentP === 'Resume') {
       return <Resume />;
     }
     return <Contact />;
   };
 
-  const handlePageChange = (page) => setCurrentPage(page);
+  const handlePChange = (page) => setCurrentP(page);
 
   return (
     <div className='react-container'>
-      {/* Passing currentPage from state and the function to update it */}
-      <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
-      {/* return correct component  */}
+      <NavTabs currentP={currentP} handlePChange={handlePChange} />
       {renderPage()}
      <Footer />
     </div>
