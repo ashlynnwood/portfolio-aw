@@ -7,9 +7,6 @@ function Nav({ currentP, handlePChange }) {
         <a
           href="#home"
           onClick={() => handlePChange('Home')}
-          // This is a conditional (ternary) operator that checks to see if the current page is "Home"
-          // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
-          // Do this for every page
           className={currentP === 'Home' ? 'nav-link active' : 'nav-link'}
         >
           Home

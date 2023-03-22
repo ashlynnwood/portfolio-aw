@@ -2,7 +2,6 @@
   width: 350px; 
   height: 350px; 
   object-fit: cover;
-  /* border-radius: 90%; */
   border-radius: 0 32px 32px 0;
   justify-self: end;
 }
@@ -10,17 +9,12 @@
 .about-card {
   box-shadow: 0 16px 32px 0 rgba(14, 16, 36, 0.2), 0 0 4px 0 rgba(14, 16, 36, 0.12), 0 1px 2px 0 rgba(14, 16, 36, 0.16);
   color: #fcf5fb;
-  display: -ms-grid;
   display: grid;
-  -ms-flex-align: center;
   align-items: center;
   grid-auto-columns: 1fr;
   grid-column-gap: 0rem;
   grid-row-gap: 0rem;
-  -ms-grid-columns: 0.5fr 1fr;
   grid-template-columns: 1fr 0.5fr;
-  -ms-grid-rows: auto;
-  grid-template-rows: auto;
   border-radius: 32px;
   background-image: (linear, left top, left bottom, from(#5661e8), to(#4c55cc));
   background-image: linear-gradient(180deg, #5661e8, #4c55cc);
@@ -30,5 +24,5 @@
 }
 
 .about-card > div {
-  padding: 6rem; /* add some padding to the text container */
+  padding: 6rem; 
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import NavTabs from './NavTabs';
+import Nav from './Nav';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
@@ -8,10 +8,10 @@ import Resume from './pages/Resume';
 import Footer from './Footer';
 import '../index.css';
 
-export default function PortContainer() {
+export default function Portfolio() {
   const [currentP, setCurrentP] = useState('Home');
 
-//  Render currect page components depending on current page user is on
+//  Render page components depending on current page user is on
   const renderPage = () => {
     if (currentP === 'Home') {
       return <Home />;
@@ -32,7 +32,7 @@ export default function PortContainer() {
 
   return (
     <div className='react-container'>
-      <NavTabs currentP={currentP} handlePChange={handlePChange} />
+      <Nav currentP={currentP} handlePChange={handlePChange} />
       {renderPage()}
      <Footer />
     </div>
