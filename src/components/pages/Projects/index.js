@@ -2,10 +2,9 @@ import React from 'react';
 import paw from '../../../assets/pawpath.jpeg'
 import garage from '../../../assets/garagesale.png'
 import note from '../../../assets/notetaker.png'
-import placeholder from '../../../assets/placeholder.jpg'
 import jate from '../../../assets/jate.png'
-// import readme from '../../../assets/homepage-screenshot.png'
-// import mongomate from '../../../assets/homepage-screenshot.png'
+import anythm from '../../../assets/anythm1.jpeg'
+import mongomate from '../../../assets/mongoose.jpeg'
 import './Projects.css';
 
 export default function Projects() {
@@ -35,14 +34,15 @@ export default function Projects() {
       image: note 
     },
     {
-      title: 'README Generator',
-      github: 'https://github.com/ashlynnwood/README-generator',
-      image: placeholder 
+      title: 'Anthym',
+      github: 'https://github.com/AlexNash91/Beat-Bots',
+      live: 'https://anthym.herokuapp.com/',
+      image: anythm 
     },
     {
       title: 'Mongo Mate',
       github: 'https://github.com/ashlynnwood/mongo-mate',
-      image: placeholder
+      image: mongomate
     }
   ]
 
